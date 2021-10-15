@@ -1,0 +1,238 @@
+.App {
+  height: 100vh;
+  background-color: #0d1116;
+  overflow: scroll;
+  text-align: center;
+}
+
+.container {
+  height: 100%;
+  background-color: #0d1116;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header-container {
+  padding-top: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.content-container {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  z-index: 30;
+}
+
+.header {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.planet-2 {
+  position: absolute;
+  top: 25%;
+  left: -2%;
+  z-index: 1;
+  animation: object-floating-diagonal2 8s infinite ease-in-out alternate;
+  transition: all 300ms cubic-bezier(1.25, 2.46, 2.45, 2.84);
+}
+
+.planet-1 {
+  position: absolute;
+  top: 100px;
+  right: 3%;
+  z-index: 1;
+  animation: object-floating-diagonal1 5.5s infinite ease-in-out alternate;
+  transition: all 300ms cubic-bezier(1.25, 2.46, 2.45, 2.84);
+}
+
+.stars-wrapper {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+}
+
+.stars-container {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes object-floating-diagonal2 {
+  100% {
+    transform: translate(36px, -24px);
+  }
+  0% {
+    transform: translate(-24px, 36px);
+  }
+}
+
+@keyframes object-floating-diagonal1 {
+  0% {
+    transform: translate(24px, -24px);
+  }
+  100% {
+    transform: translate(-24px, 24px);
+  }
+}
+
+.sub-text {
+  font-size: 25px;
+  color: white;
+  margin: 0 auto;
+}
+
+.gradient-text {
+  background: -webkit-linear-gradient(left, #60c657 30%, #35aee2 60%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cta-button {
+  height: 45px;
+  border: 0;
+  width: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.connect-wallet-button {
+  background: -webkit-linear-gradient(left, #60c657, #35aee2);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin-top: 20px;
+}
+
+.opensea-btn {
+  margin: 5px auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 215px;
+  align-items: center;
+  background: -webkit-linear-gradient(left, #2081e2, #35aee2);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s cubic-bezier(0.4, 0, 1, 1) infinite;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  height: 45px;
+  border: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.opensea-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.mint-button {
+  background: -webkit-linear-gradient(left, #a200d6, #ff6fdf);
+  background-size: 200% 200%;
+  animation: gradient-animation 4s ease infinite;
+  margin-right: 15px;
+}
+
+.loader {
+  margin: 20px auto 20px auto;
+  height: 282.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-image-wrapper {
+  margin-top: 40px;
+}
+.total-nft,
+.user-minted-nft {
+  margin: 0 auto;
+  color: #fff;
+}
+
+.nft-image img {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+}
+
+.opensea-button {
+  background-color: rgb(32, 129, 226);
+}
+
+.mint-count {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.twitter-logo {
+  width: 35px;
+  height: 35px;
+}
+
+.footer-text {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+/* KeyFrames */
+@-webkit-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
