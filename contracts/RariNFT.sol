@@ -11,17 +11,16 @@ contract RariNFT is ERC721URIStorage {
 
   using Counters for Counters.Counter;
   Counters.Counter private _tokenIds;
-  
+
   string _baseTokenURI;
   uint256 public MAX_MINT_LIMIT = 50;
-  uint256 internal _price = 0.05 ether;
   address public owner;
   mapping(uint256 => address) rariIndexToAddress;
   mapping (address => uint256) public _balanceOf;
 
   event NewRareNFTMinted(address _sender, uint256 _tokenId);
 
-  constructor() ERC721 ("RariNFT", "RARI") {
+  constructor() ERC721 ("RariNAME", "NRARI") {
     owner = msg.sender;
   }
 
@@ -45,15 +44,6 @@ contract RariNFT is ERC721URIStorage {
   function _setBaseTokenURI(string memory _uri) public OnlyOwner {
     _baseTokenURI = _uri;
   }
-   
-  function setPrice(uint256 _newPrice) public OnlyOwner {
-    _price = _newPrice;
-  }
-  
-  function getPrice() public view returns (uint256){
-     return _price;
-  }
-
 
   function _pickRandomFirstWord(uint256 tokenId, string[9] memory firstWords) internal pure returns (string memory) {
       uint256 rand = random(string(abi.encodePacked("FIRST_WORD", Strings.toString(tokenId))));
